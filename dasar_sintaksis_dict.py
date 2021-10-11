@@ -24,3 +24,14 @@ print(users["address"]['street'])
 print(users["address"]['geo'])
 print(users["address"]['geo']['lat'])
 print(users["address"]['geo']['lng'])
+
+print(users)
+print(type(users))
+print('\n')
+import json
+result = json.dumps(users)
+print(result)
+print(type(result))
+
+with open('result.json', 'w') as file:
+    json.dump(users, file)
